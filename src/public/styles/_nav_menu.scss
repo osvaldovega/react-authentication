@@ -1,0 +1,20 @@
+.menu_opts {
+  flex-grow: 1;
+  
+  a {
+    font-family: qs_light;
+    text-decoration: none;
+    color: $font-color;
+    display: inline-flex;
+    flex-flow: row;
+    margin: 0 5px;
+
+    .icon {
+      margin: 0 5px;
+    }
+  }
+
+  .selected {
+    color: lime; 
+  }
+}

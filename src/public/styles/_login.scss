@@ -1,0 +1,55 @@
+.login-bck {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  filter: blur(3px);
+}
+
+.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  .form {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.7;
+    border-radius: 3px;
+    padding: 20px;
+    border: 1px ridge lightblue;
+    filter: drop-shadow(5px 5px 5px lightblue);
+
+
+    @include mQ(900px) {
+      width: 50%;
+    }
+
+    @include mQ(600px) {
+      width: 75%;
+    }
+
+    @include mQ(400px) {
+      width: 85%;
+    }
+
+    & > h2 {
+      color: white;
+      font-weight: 300;
+      font-size: 30px;
+    }
+
+    & > .login_button {
+      margin: 25px 0 0 0;
+      @include font('regular');
+    }
+  }
+}

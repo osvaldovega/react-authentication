@@ -1,0 +1,31 @@
+@mixin font ($type) {
+  @if $type == 'light' {
+    font-family: qs_light;
+  }
+
+  @if $type == 'regular' {
+    font-family: qs_regular;
+  }
+
+  @if $type == 'medium' {
+    font-family: qs_medium;
+  }
+
+  @if $type == 'bold' {
+    font-family: qs_bold;
+  }
+}
+
+@mixin mQ($arg...) {
+  @if length($arg) == 1 {
+    @media screen and (max-width: nth($arg, 1)){
+      @content;
+    };
+  }
+
+  @if length($arg) == 2 {
+    @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)){
+      @content;
+    };
+  }
+}
