@@ -3,9 +3,9 @@ import { Route, Redirect } from "react-router-dom";
 import LocalStorage from '../../utils/localStorage';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
-  const token = LocalStorage.get('token');
+  const token = LocalStorage.get('token') || false;
 
-  return <Route 
+  return <Route
     {...rest}
     render={props =>
       token

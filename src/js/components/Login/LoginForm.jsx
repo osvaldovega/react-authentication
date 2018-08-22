@@ -33,7 +33,7 @@ const LoginForm = ({ username, password, onInputChange, onSubmit, isButtonDisabl
       color='primary'
       className={'login_button'}
       disabled={isButtonDisabled}
-      onClick={() => onSubmit()}
+      onClick={(e) => onSubmit(e)}
     >
       Login
     </Button>

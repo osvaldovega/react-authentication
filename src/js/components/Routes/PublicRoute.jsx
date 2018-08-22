@@ -6,7 +6,7 @@ import {
 import LocalStorage from '../../utils/localStorage';
 
 const PublicRoute = ({ component: Component, ...rest }) => {
-  const token = LocalStorage.get('token');
+  const token = LocalStorage.get('token') || false;
 
   return <Route 
     {...rest}
