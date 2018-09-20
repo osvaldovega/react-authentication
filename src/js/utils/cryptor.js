@@ -1,6 +1,8 @@
 import cryptorjs from 'cryptorjs';
+import { CRYPTOR_KEY, CYPHER_KEY } from './constants';
 
-const cryptorKey = new cryptorjs('W0rm22B@thr0om84M@n42R!fl318C@ppucc!n080Sh!pS0l!d25G@rd3n92');
+const cryptorKey = new cryptorjs(CRYPTOR_KEY, CYPHER_KEY);
+
 const encode = (value) => cryptorKey.encode(value);
 const decode = (value) => cryptorKey.decode(value);
 

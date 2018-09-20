@@ -1,45 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .login-bck {
-  max-width: 100%;
-  height: 100%;
-  display: block;
+  height: 100vh;
   position: relative;
-  filter: blur(3px);
+  background: url('../img/back4.png') no-repeat fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .login {
-  width: 100%;
-  height: 100%;
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  background: inherit;
+  overflow: hidden;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+
+  &::before {
+    width: 400px;
+    height: 450px;
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    bottom: 0;
+    right: 0;
+    background: inherit;
+    box-shadow: inset 0 0 0 200px rgba(255,255,255,0.2);
+    filter: blur(10px);
+  }
 
   .form {
-    width: 25%;
+    width: 90%;
+    height: 90%;
+    position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: black;
-    opacity: 0.7;
-    border-radius: 3px;
-    padding: 20px;
-    border: 1px ridge lightblue;
-    filter: drop-shadow(5px 5px 5px lightblue);
-
-
-    @include mQ(900px) {
-      width: 50%;
-    }
-
-    @include mQ(600px) {
-      width: 75%;
-    }
-
-    @include mQ(400px) {
-      width: 85%;
-    }
 
     & > h2 {
       color: white;
@@ -49,7 +56,13 @@
 
     & > .login_button {
       margin: 25px 0 0 0;
-      @include font('regular');
+      @include font('light');
+    }
+
+    & > .isEnabled {
+      background-color: #df2359;
+      color: white;
+      border: 0;
     }
   }
 }

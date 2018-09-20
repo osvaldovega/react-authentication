@@ -57,25 +57,27 @@ export default class Login extends Component {
       <Fragment>
         { isLoading && <Loader /> }
 
-        <img src="../../../public/img/back4.png" className={ 'login-bck' } />
+        <div className={ 'login-bck' }>
 
-        <ReactCSSTransitionGroup
-          transitionName="slide"
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}
-          transitionAppear={true}
-          transitionAppearTimeout={1000}
-          component='div'
-          className='login'
-        >
-          <LoginForm
-            isButtonDisabled={isDisabled}
-            onInputChange={this.onInputChange}
-            onSubmit={this.onLoginFormSubmit}
-            password={password}
-            username={username}
-          />
-        </ReactCSSTransitionGroup>
+          <ReactCSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={1000}
+            transitionLeaveTimeout={1000}
+            transitionAppear={true}
+            transitionAppearTimeout={1000}
+            component='div'
+            className='login'
+          >
+            <LoginForm
+              isButtonDisabled={isDisabled}
+              onInputChange={this.onInputChange}
+              onSubmit={this.onLoginFormSubmit}
+              password={password}
+              username={username}
+            />
+          </ReactCSSTransitionGroup>
+
+        </div>
 
         <SnackBar
           isOpen={snackBarStatus}
