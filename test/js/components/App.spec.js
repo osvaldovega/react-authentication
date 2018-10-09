@@ -1,7 +1,7 @@
 import React from 'react';
 import App from '../../../src/js/components/App';
 
-describe('<App /> Component', () => {
+describe('COMPONENT - App', () => {
 
   it('Render <App /> component', () => {
     const wrapper = shallow(<App />);

@@ -2,7 +2,7 @@ import * as types from '../../../src/js/utils/constants';
 import loginReducer from '../../../src/js/reducers/login';
 import initialState from '../../../src/js/utils/initialState';
 
-describe('LOGIN Reducer', () => {
+describe('REDUCER - Login', () => {
 
   let state;
 

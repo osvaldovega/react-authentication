@@ -1,13 +1,14 @@
 import * as types from '../../../src/js/utils/constants';
-// import LocalStorage from '../../../src/js/utils/localStorage';
 import {
-  validateUserSuccess,
-  validateUserError,
   onSnackBarChange,
+  onUserLogout,
   validateUser,
+  validateUserError,
+  validateUserSuccess,
 } from '../../../src/js/actions';
+import { dispatch } from 'rxjs/internal/observable/pairs';
 
-describe('REDUX Login - Actions', () => {
+describe('ACTIONS - Login', () => {
 
   it('Should create and action - "validateUserSuccess"', () => {
     const data = {
@@ -70,5 +71,15 @@ describe('REDUX Login - Actions', () => {
     };
 
     expect(validateUser(username, password)).to.be.deep.equal(expectedAction);
+  });
+
+  it('Should create and action - "onUserLogout"', () => {
+    const dispatch = spy();
+    const expectCall = {
+      type: types.USER_LOGOUT
+    };
+
+    onUserLogout()(dispatch);
+    expect(dispatch).to.have.been.calledWith(expectCall);
   });
 });

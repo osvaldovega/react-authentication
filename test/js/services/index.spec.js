@@ -1,7 +1,7 @@
 import api from '../../../src/js/services';
 import { encode } from '../../../src/js/utils/cryptor';
 
-describe('Services', () => {
+describe('SERVICES', () => {
 
   it('Validate USER for login with correct username and password', () => {
     const value = 'adminadmin';

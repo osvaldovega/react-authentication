@@ -1,7 +1,7 @@
 import React from 'react';
 import Loader from '../../../../src/js/components/Loader';
 
-describe('<Loader /> Component', () => {
+describe('COMPONENT - Loader', () => {
 
   it('Render <Loader /> Component', () => {
     const wrapper = shallow(<Loader />);
