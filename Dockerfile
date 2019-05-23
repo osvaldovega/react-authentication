@@ -1,5 +1,4 @@
-FROM node:alpine
-RUN apk add --update nodejs
+FROM node:8.16-alpine
 RUN apk add bash
 WORKDIR /usr/src/app
 COPY package*.json ./
