@@ -10,6 +10,7 @@ import store from './store';
 import App from './components/App.jsx';
 import '../public/styles/main.scss';
 
+// root
 const root = document.getElementById('app');
 
 const theme = createMuiTheme({
