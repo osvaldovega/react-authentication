@@ -1,7 +1,7 @@
 {
   "name": "react-authentication",
   "version": "1.0.0",
-  "description": "Login using react library with version 16",
+  "description": "Authentication using react library with version 16",
   "main": "./src/js/index.js",
   "scripts": {
     "test": "nyc mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive --no-deprecation",
